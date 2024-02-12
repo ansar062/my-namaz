@@ -27,7 +27,7 @@ export default function GetData() {
       );
     };
     getProducts();
-  }, []);
+  }, [featuredProductsCollectionRef]);
 
   const [hidden, getHidden] = useState(true);
   function handleHidden() {
@@ -232,7 +232,7 @@ export default function GetData() {
   return (
     <div className="flex justify-center items-center">
       {featuredProducts.map((item) => (
-        <div className="text-xl">
+        <div key={item.id} className="text-xl">
           <div className="h-[50px] mt-[10px] flex items-center justify-evenly ">
             <Button
               handleFunction={() => handleFajrDecrease(item.id)}
