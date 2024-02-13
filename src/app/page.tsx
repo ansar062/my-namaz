@@ -3,7 +3,7 @@ import GetData from "./frontend/getdata";
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-24">
+    <main className="p-24">
       <div className="font-mono justify-center items-center">
         <GetData />
       </div>
